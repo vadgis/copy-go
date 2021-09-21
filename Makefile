@@ -15,4 +15,5 @@ builder:
 	docker build --force-rm -t locals/builder .
 	docker run  --rm -v $$(pwd):/tmp/builder locals/builder
 run:
+	go mod vendor
 	go run cmd/copy.go
